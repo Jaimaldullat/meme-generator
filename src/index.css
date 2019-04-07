@@ -12,3 +12,169 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+* {
+  box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body div#root {
+  min-height: 100vh;
+}
+body div#root > div {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.spinner-div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%)
+}
+/********************
+
+  HEADER
+
+********************/
+
+header {
+  background: #555;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+header .meme-heading {
+  display: inline-block;
+  position: relative;
+}
+
+header .meme-heading::after {
+  content: "";
+  border: 2px solid red;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+
+/********************
+
+  MAIN
+
+********************/
+main {
+  flex: 1;
+}
+article.meme-article {
+  margin: 10px auto;
+  text-align: center
+}
+
+
+.meme-images {
+  column-count: 5;
+  column-gap:  0px;
+  margin-top: 20px;
+}
+
+.meme-images .meme-image {
+
+}
+
+.meme-images .meme-image img {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+}
+.meme-images .meme-image img:hover {
+  transform: scale(1.08);
+  transition: transform 0.7s ease;
+
+}
+
+.result-div {
+  position: relative;
+}
+.result-div img {
+  height: calc(100vh - 300px);
+}
+
+
+form.meme-form input,
+form.meme-form  button {
+  margin: 10px 10px;
+  border: 1px solid #555;
+  padding: 7px 10px;
+  font-size: 1.2rem;
+}
+form.meme-form  input:focus {
+  outline: none;
+}
+form.meme-form  button {
+  background: tomato;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.result-div {
+  position: relative;
+  margin: 20px auto;
+  display: inline-block;
+}
+.top-text,
+.bottom-text {
+  position: absolute;
+  z-index: 999;
+  color: #fff;
+  font-size: 1.9rem;
+  left: 50%;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #000,
+  -2px -2px 0 #000,
+  2px -2px 0 #000,
+  -2px 2px 0 #000,
+  0 2px 0 #000,
+  2px 0 0 #000,
+  0 -2px 0 #000,
+  -2px 0 0 #000,
+  2px 2px 5px #000;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  word-wrap: break-word;
+  text-transform: uppercase;
+  cursor: move;
+}
+.top-text {
+  top:3px;
+}
+.bottom-text {
+  bottom:3px;
+}
+/********************
+
+  FOOTER
+
+********************/
+
+footer {
+  background: #555555;
+  color: #fff;
+  text-align: center;
+  padding: 2px 0;
+
+}
